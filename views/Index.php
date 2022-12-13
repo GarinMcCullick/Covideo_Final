@@ -6,7 +6,7 @@ require_once './controllers/IndexController.php';
 ?>
 <div class="banner">
     <h1>Welcome to Covideo Games!</h1>
-    <form class="adminSignIn">
+    <form class="adminSignIn" action="admin.php" method="POST">
         <label for="adminPassword">Admin:</label>
         <input type="password" id="adminPassword" name="adminPassword">
         <input type="submit" name="submit" value="Login">
