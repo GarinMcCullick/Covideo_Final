@@ -15,12 +15,12 @@ $request = $_SERVER['REQUEST_URI']; //getting file view name from url
 
 //if uri (url) comes back with "page name" and a file exists it sets associative array value to the correct page which then displays in the index body.
 //had to do it this way instead of switch statement so that stylesheet only needs referenced in the index.php file
-if (strpos($_SERVER['REQUEST_URI'], "/") !== false) {
-    $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'Index';
-} else if (strpos($_SERVER['REQUEST_URI'], "cart") !== false) {
-    $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'cart';
+if (strpos($_SERVER['REQUEST_URI'], "successPage") !== false) {
+    $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'successPage';
+} else if (strpos($_SERVER['REQUEST_URI'], "product") !== false) {
+    $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'product';
 } else {
-    $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'home';
+    $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'Index';
 }
 
 ?>
