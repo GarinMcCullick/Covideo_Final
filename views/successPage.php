@@ -1,3 +1,18 @@
+<?php
+$_SESSION['custName'] = $_GET['fName']; //setting form data to session data to store
+$_SESSION['custEmail'] = $_GET['email'];
+include "./controllers/ProductController.php";
+include './controllers/custController.php';
+if ($_GET['consoleID'] = 1) {
+    call_user_func('Products::deleteProductByOrderPlaystation');
+} else if ($_GET['consoleID'] = 0) {
+    call_user_func('Products::deleteProductByOrderSwitch');
+} else if ($_GET['consoleID'] = 2) {
+    call_user_func('Products::deleteProductByOrderXbox');
+}
+call_user_func('Cust::AddOrder');
+
+?>
 <script>
     setTimeout(function() { //js timeout function
         window.location.href = 'http://localhost/Covideo_Final/'; // the redirect goes here

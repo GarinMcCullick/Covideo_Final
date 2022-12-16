@@ -140,7 +140,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
-body h1 {
+body .banner h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +157,7 @@ body h1 {
   margin-top: 40px;
   margin-right: 1rem;
 }
-body section {
+.index-section {
   width: 100%;
   height: 90%;
   display: flex;
@@ -165,7 +165,7 @@ body section {
   align-items: center;
   justify-content: space-evenly;
 }
-body section div {
+.index-div {
   width: 400px;
   height: 600px;
   background-color: whitesmoke;
@@ -178,33 +178,33 @@ body section div {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-body section div:hover {
+.index-div:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-section div h2 {
+section .index-div h2 {
   text-align: center;
   font-size: 36px;
   text-decoration: underline;
 }
-section div button {
+button {
   width: 120px;
   height: 30px;
 }
-section div button:hover {
+.greenButton:hover {
   background-color: lawngreen;
   border: 1px solid black;
   cursor: pointer;
   text-decoration: underline;
 }
-section div img {
+section .index-div img {
   width: 70%;
   height: 60%;
   border-radius: 10px;
 }
-section div h3 {
+section .index-div h3 {
   font-size: 24px;
 }
-section div p {
+section .index-div p {
   color: red;
 }
 .greyButton:hover {
@@ -227,6 +227,11 @@ section div p {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
+  align-items: center;
+}
+.product-section img{
+  width:300px;
+  height:400px;
 }
 .product-section h2 {
   font-size: 36px;
@@ -268,4 +273,75 @@ section div p {
     transform: scale(1);
   }
 }
-/*******************************************************************/
+/*************************************Admin Page******************************/
+.admin-section{
+  background-color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width:70vw;
+  height:85vh;
+  border-radius: 25px;
+}
+.logout{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 40px;
+  margin-right: 1rem;
+}
+.admin-h1{
+  width:100%;
+  height:10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border:1px solid red;
+}
+.admin-container{
+  width:100%;
+  height:90%;
+  display:flex;
+  flex-flow: row nowrap;
+  border-radius: 25px;
+  border:1px solid red;
+}
+.admin-left{
+  width:50%;
+  height: 100%;
+  border-radius: 25px;
+  display:flex;
+  flex-flow:column wrap;
+  justify-content: start;
+  align-items: center;
+  border:1px solid red;
+}
+.admin-right{
+  width: 50%;
+  height:100%;
+  border-radius: 25px;
+  border:1px solid red;
+}
+.admin-container h2{
+  text-align: center;
+  margin-top:1rem;
+}
+.admin-left div{
+  width:65%;
+  height:auto;
+  margin-top:1rem;
+  line-height: 1.5rem;
+}
+.admin-left div span{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  border-bottom:1px solid black;
+  margin-top:1rem;
+}
+.admin-left div span p{
+  margin-left:1rem;
+}
