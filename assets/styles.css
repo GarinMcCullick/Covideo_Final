@@ -299,7 +299,6 @@ section .index-div p {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  border:1px solid red;
 }
 .admin-container{
   width:100%;
@@ -307,23 +306,26 @@ section .index-div p {
   display:flex;
   flex-flow: row nowrap;
   border-radius: 25px;
-  border:1px solid red;
 }
 .admin-left{
   width:50%;
   height: 100%;
   border-radius: 25px;
   display:flex;
-  flex-flow:column wrap;
+  flex-flow:column nowrap;
   justify-content: start;
   align-items: center;
-  border:1px solid red;
+  overflow-y: auto;
 }
 .admin-right{
-  width: 50%;
-  height:100%;
+  width:50%;
+  height: 100%;
   border-radius: 25px;
-  border:1px solid red;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content: start;
+  align-items: center;
+  overflow-y: auto;
 }
 .admin-container h2{
   text-align: center;
@@ -344,4 +346,20 @@ section .index-div p {
 }
 .admin-left div span p{
   margin-left:1rem;
+}
+.admin-right div{
+  width:65%;
+  height:auto;
+  margin-top:1rem;
+  line-height: 1.5rem;
+}
+.admin-right div span{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  border-bottom:1px solid black;
+  margin-top:1rem;
+}
+.admin-right div span p{
+  margin-left:3rem;
 }

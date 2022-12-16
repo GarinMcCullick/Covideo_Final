@@ -35,7 +35,7 @@ call_user_func('Cust::AllOrders'); //getting all orders
             <h2>Edit Consoles</h2>
             <div>
                 <span>
-                    <?php echo '<a href="./edit.php?id=' . $products[0]['consoleID'] . '"><button class="greenButton">Edit</button></a>'; ?>
+                    <?php echo '<a href="edit.php?id=' . $products[0]['consoleID'] . '"><button class="greenButton">Edit</button></a>'; ?>
                     <p><?php echo $products[0]['consoleName']; ?></p>
                     <p>Qty: &nbsp;<?php echo $products[0]['consoleInventory']; ?></p>
                 </span>
@@ -51,13 +51,17 @@ call_user_func('Cust::AllOrders'); //getting all orders
                 </span>
             </div>
         </div>
-        <div class="admin-left">
+        <div class="admin-right">
             <h2>Customer Orders</h2>
             <div>
                 <span>
-                    <p><?php echo $orders[0]['custName']; ?></p>
-                    <p><?php echo $orders[0]['custEmail']; ?></p>
-                    <P></P>
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>ConsoleID</p>
+                </span>
+                <span><?php foreach ($orders as $values => $next) {
+                            echo '<span><p>' . $orders[0]['custName'] . '</p><p>' . $orders[0]['custEmail'] . '</p><p>' . $orders[0]['consoleID'] . '</p></span>';
+                        } ?>
                 </span>
             </div>
         </div>
